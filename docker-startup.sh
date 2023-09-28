@@ -1,5 +1,8 @@
 #!/bin/bash
 # Bash docker environment management script
+# Version 1.0
+# Michael Aggerholm
+# 28/09-23
 
 # Paths
 TIGERCMS="$HOME/PhpstormProjects/tigercms/docker-compose.yml"
