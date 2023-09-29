@@ -169,38 +169,39 @@ while [[ $# -gt 0 ]]; do
             exit 1
             ;;
 	--help)
-	    echo "Docker-startup help."
-	    echo "Available docker environments:"
-	    echo "tigercms"
-	    echo "wordpress"
-	    echo "jisport"
-	    echo ""
-	    echo "Available parameters:"
-	    echo "--start			# Start a docker environment"
-	    echo "--restart		# Restart a docker environment"
-	    echo "--down			# Down a docker environment"
-	    echo "--stop			# Stop a docker environment"
-	    echo "--stats			# Gives docker stats for running containers"
-	    echo "--help			# Provides this help menu.. dummy"
-	    echo ""
-	    echo "Example usages:" 
-	    echo "--start tigercms	# Start tigercms"
-	    echo "--down tigercms		# Down tigercms"
-	    echo "--down all		# Down all docker environments"
-	    echo ""
-	    echo "The option 'all' is available for all docker environment options"
-	    echo ""
-	    echo "Container parameter: --container"
-	    echo "--container parameters:"
-	    echo "--restart"
-	    echo "--start"
-	    echo "--logs"
-	    echo "--stop"
-	    echo ""
-	    echo "Example usages:"
-	    echo "--stats					# To get a list of all running containers"
-	    echo "--container --restart tigercmspma	# Restart the tigercmspma container"
-	    echo ""
+        cat << EOF
+Docker-startup help.
+Available docker environments:
+    tigercms
+    wordpress
+    jisport
+
+Available parameters:
+    --start			# Start a docker environment
+    --restart		# Restart a docker environment
+    --down			# Down a docker environment
+    --stop			# Stop a docker environment
+    --stats			# Gives docker stats for running containers
+    --help			# Provides this help menu.. dummy
+
+Example usages:
+    --start tigercms	# Start tigercms
+    --down tigercms		# Down tigercms
+    --down all		# Down all docker environments
+
+    The option 'all' is available for all docker environment options
+
+Container parameter: --container
+    --container parameters:
+    --restart
+    --start
+    --logs
+    --stop
+
+Example usages:
+    --stats # To get a list of all running containers
+    --container --restart tigercmspma # Restart the tigercmspma container
+EOF
 	    exit 1
 	    ;;
         *)
